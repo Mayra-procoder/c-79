@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>student list</title>
+    </head>
+    <body>
+        <center>
+            <h1>Student list </h1>
+            <div>
+                <label>1 </label>
+                <span>
+                    <input type="text" id="input_1" placeholder="Name of student">
+                </span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <label>2 </label>
+                <span>
+                    <input type="text" id="input_2" placeholder="Name of student">
+                </span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <label>3 </label>
+                <span>
+                    <input type="text" id="input_3" placeholder="Name of student">
+                </span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <label>4 </label>
+                <span>
+                    <input type="text" id="input_4" placeholder="Name of student">
+                </span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button id="submitB" onclick="submitF()">submit</button>
+            <legend>Mayra I am</legend>
+            <button id="sortB" onclick="sortF()">Sort in alphabetical order</button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <label id="show"></label>
+        </center>
+    </body>
+    <script>
+       var sla=[];
+       document.getElementById("sortB").style.display="none";       
+       function submitF(){
+           var name1=document.getElementById("input_1").value;
+           var name2=document.getElementById("input_2").value;
+           var name3=document.getElementById("input_3").value;
+           var name4=document.getElementById("input_4").value;
+           sla.push(name1);
+           sla.push(name2);
+           sla.push(name3);
+           sla.push(name4);
+           console.log(sla);
+           document.getElementById("show").innerHTML=sla;
+           document.getElementById("submitB").style.display="none"; 
+           document.getElementById("sortB").style.display="inline-block"; 
+       }
+       function sortF(){
+           sla.sort();
+           console.log(sla);
+           document.getElementById("show").innerHTML=sla;
+       }
+    </script>
+</html>
